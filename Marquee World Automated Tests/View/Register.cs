@@ -39,6 +39,7 @@ namespace Marquee_World_Automated_Tests.View
             if (submit)
             {
                 Browser.Driver.FindElement(By.Id("submitform")).Click();
+                Browser.Instance.Wait(5000);
             }
         }
 

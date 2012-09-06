@@ -231,8 +231,8 @@ namespace Marquee_World_Automated_Tests.Tests
         {
             Register RegisterView = new Register();
             string email = ConfigUtil.GetString("Marquee.register.email").Replace("@", "+" + (new Random()).Next(1000).ToString() + "@");
-            RegisterView.RegisterArtistUser(ConfigUtil.GetString("Marquee.register.name"), ConfigUtil.GetString("Marquee.register.lastname"),0,0,2011,true, ConfigUtil.GetString("Marquee.register.zip"), email, "!$%$&", ConfigUtil.GetString("Marquee.register.pass"), ConfigUtil.GetString("Marquee.register.pass"), ConfigUtil.GetString("Marquee.register.artist.name"), "", "", "", "", true,true);
-            Assert.IsTrue(Browser.Instance.IsTextPresent(By.ClassName("error"), "Your email did not match the confirmed password"));
+            RegisterView.RegisterArtistUser(ConfigUtil.GetString("Marquee.register.name"), ConfigUtil.GetString("Marquee.register.lastname"),10,10,2011,true, ConfigUtil.GetString("Marquee.register.zip"), email, email, ConfigUtil.GetString("Marquee.register.pass"), ConfigUtil.GetString("Marquee.register.pass"), ConfigUtil.GetString("Marquee.register.artist.name"), "", "", "", "", true,true);
+            Assert.IsTrue(Browser.Instance.IsTextPresent(By.ClassName("subtitle"), "Under 13 Years of Age"));
         }
         //
         //Invalid Artist sign up - Invalid char Email Address field

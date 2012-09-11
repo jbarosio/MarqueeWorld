@@ -489,7 +489,7 @@ namespace Marquee_World_Automated_Tests.Tests
             Assert.IsTrue(false);
         }
         //
-        //Edit Email Account
+        //Edit Email Account Empty
         //
         [TestMethod]
         public void EditEmailEmpty()
@@ -534,6 +534,42 @@ namespace Marquee_World_Automated_Tests.Tests
             accountView.EditEmail(email, ConfigUtil.GetString("Marquee.user.artist"), true);
             // Unable to validate this test case because there is a bug when trying to enter same email name
             Assert.IsTrue(false);
+        }
+        //
+        //Edit Current Password Field Succesfully
+        //
+        [TestMethod]
+        public void EditCurrentPasswordFieldSuccesfully()
+        {
+            string currentpassword = ConfigUtil.GetString("Marquee.pass.artist");
+            string password = ConfigUtil.GetString("Marquee.account.password");
+            Account accountView = new Account();
+            accountView.EditPassword(password, currentpassword, currentpassword, true);
+            Assert.IsTrue(Browser.Instance.IsTextPresent(By.Id("med_box"),"Your password has been updated. Please make a note!"));
+        }
+        //
+        //Edit Current Password Field Empty
+        //
+        [TestMethod]
+        public void EditCurrentPasswordFieldEmpty()
+        {
+            string currentpassword = "";
+            string password = ConfigUtil.GetString("Marquee.account.password");
+            Account accountView = new Account();
+            accountView.EditPassword(currentpassword, password, password, true);
+            Assert.IsTrue(Browser.Instance.IsElementPresent(By.Name("current")));
+        }
+        //
+        //Edit Current Password Field Long Characters
+        //
+        [TestMethod]
+        public void EditCurrentPasswordFieldLongCharacters()
+        {
+            string currentpassword = "carlitos1carlitos1carlitos1carlitos1carlitos1carlitos1carlitos1carlitos1";
+            string password = ConfigUtil.GetString("Marquee.account.password");
+            Account accountView = new Account();
+            accountView.EditPassword(currentpassword, password, password, true);
+            Assert.AreEqual(Browser.Driver.FindElement(By.Name("current")).GetAttribute("value").Length, 20);
         }
     }
 }

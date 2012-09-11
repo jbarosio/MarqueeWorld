@@ -85,5 +85,18 @@ namespace Marquee_World_Automated_Tests.View
                 Browser.Driver.FindElement(By.Name("submit")).Click();
 
         }
+        public void EditPassword(string currentpassword, string password, string confirmpassword, bool submit)
+        {
+            Login login = new Login();
+            login.LoginSuccesfullyArtistUser();
+            Browser.Driver.FindElement(By.CssSelector("div#password div.table_column_middle")).Click();
+            Browser.Instance.Wait(By.Name("current"));
+            Browser.Driver.FindElement(By.Name("current")).SendKeys(currentpassword);
+            Browser.Driver.FindElement(By.Name("password1")).SendKeys(password);
+            Browser.Driver.FindElement(By.Name("password2")).SendKeys(confirmpassword);
+            if (submit)
+                Browser.Driver.FindElement(By.Name("submit")).Click();
+
+        }
     }
 }

@@ -476,5 +476,64 @@ namespace Marquee_World_Automated_Tests.Tests
             //Can not check because is not checking the name inupts
             Assert.IsFalse(Browser.Instance.IsTextPresent(By.Id("text_" + toedit), name));
         }
+        //
+        //Edit Email Account
+        //
+        [TestMethod]
+        public void EditEmailSuccesfully()
+        {
+            string email = ConfigUtil.GetString("Marquee.register.email").Replace("@", "+" + (new Random()).Next(1000).ToString() + "@");
+            Account accountView = new Account();
+            accountView.EditEmail(email,ConfigUtil.GetString("Marquee.user.artist"),true);
+            // Unable to validate this test case because there is a bug when trying to change the email account
+            Assert.IsTrue(false);
+        }
+        //
+        //Edit Email Account
+        //
+        [TestMethod]
+        public void EditEmailEmpty()
+        {
+            string email = ConfigUtil.GetString("Marquee.register.email").Replace("@", "+" + (new Random()).Next(1000).ToString() + "@");
+            Account accountView = new Account();
+            accountView.EditEmail("", ConfigUtil.GetString("Marquee.user.artist"), true);
+            Assert.IsTrue(Browser.Instance.IsElementPresent(By.Name("email1")));
+        }
+        //
+        //Edit Email Account Long Name
+        //
+        [TestMethod]
+        public void EditEmailLongName()
+        {
+            string email = "emailtestemailtestemailtestemailtestemailtestemailtestemailtest@email.com";
+            Account accountView = new Account();
+            accountView.EditEmail(email,ConfigUtil.GetString("Marquee.user.artist"), false);
+            //Unable to validate assert because there is a bug when validating the lenght of "New Email" field"
+            Assert.AreEqual(Browser.Driver.FindElement(By.Name("email1")).GetAttribute("value").Length, 60);
+        }
+        //
+        //Edit Email Account Invalid Name
+        //
+        [TestMethod]
+        public void EditEmailInvalidName()
+        {
+            string email = "!#$%#$%$@email.com";
+            Account accountView = new Account();
+            accountView.EditEmail(email, ConfigUtil.GetString("Marquee.user.artist"), true);
+            // Unable to validate this test case because there is a bug when trying to enter invalid characters to the email account
+            Assert.IsTrue(false);
+        }
+        //
+        //Edit Email Account Same New Email Name
+        //
+        [TestMethod]
+        public void EditEmailAccountSameNewEmailName()
+        {
+            string email = "cpecora+199@makingsense.com";
+            Account accountView = new Account();
+            accountView.EditEmail(email, ConfigUtil.GetString("Marquee.user.artist"), true);
+            // Unable to validate this test case because there is a bug when trying to enter same email name
+            Assert.IsTrue(false);
+        }
     }
 }

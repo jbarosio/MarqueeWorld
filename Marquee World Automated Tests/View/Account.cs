@@ -73,5 +73,17 @@ namespace Marquee_World_Automated_Tests.View
             Browser.Driver.FindElement(By.Id("input_"+toedit)).SendKeys(Keys.Enter);
             Browser.Instance.Wait(2000);
         }
+        public void EditEmail(string newemail, string confirmemail, bool submit)
+        {
+            Login login = new Login();
+            login.LoginSuccesfullyArtistUser();
+            Browser.Driver.FindElement(By.Id("text_email")).Click();
+            Browser.Instance.Wait(By.Name("email1"));
+            Browser.Driver.FindElement(By.Name("email1")).SendKeys(newemail);
+            Browser.Driver.FindElement(By.Name("email2")).SendKeys(confirmemail);
+            if (submit)
+                Browser.Driver.FindElement(By.Name("submit")).Click();
+
+        }
     }
 }

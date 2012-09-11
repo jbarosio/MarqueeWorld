@@ -28,6 +28,7 @@ namespace Marquee_World_Automated_Tests.View
         //
         public void RegisterArtistUser(string name, string lastname, int day, int month, int year, bool gender, string Zip, string email, string email2, string password, string password2, string band, string website, string facebook, string myspace, string twitter, bool newsletter,bool submit)
         {
+            
             RegisterUser(name, lastname, day, month, year, gender, Zip, email, email2, password, password2, newsletter);
             Browser.Driver.FindElement(By.Id("artist")).Click();
             Browser.Driver.FindElement(By.Name("band")).SendKeys(band);

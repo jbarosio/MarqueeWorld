@@ -484,8 +484,10 @@ namespace Marquee_World_Automated_Tests.Tests
         {
             string email = ConfigUtil.GetString("Marquee.register.email").Replace("@", "+" + (new Random()).Next(1000).ToString() + "@");
             Account accountView = new Account();
+            Browser.Instance.TakeScreenshot("EditEmailSuccesfully");
             accountView.EditEmail(email,ConfigUtil.GetString("Marquee.user.artist"),true);
             // Unable to validate this test case because there is a bug when trying to change the email account
+            Browser.Instance.TakeScreenshot("EditEmailSuccesfully");
             Assert.IsTrue(false);
         }
         //
@@ -496,7 +498,9 @@ namespace Marquee_World_Automated_Tests.Tests
         {
             string email = ConfigUtil.GetString("Marquee.register.email").Replace("@", "+" + (new Random()).Next(1000).ToString() + "@");
             Account accountView = new Account();
+            Browser.Instance.TakeScreenshot("EditEmailEmpty");
             accountView.EditEmail("", ConfigUtil.GetString("Marquee.user.artist"), true);
+            Browser.Instance.TakeScreenshot("EditEmailEmpty");
             Assert.IsTrue(Browser.Instance.IsElementPresent(By.Name("email1")));
         }
         //
@@ -509,6 +513,7 @@ namespace Marquee_World_Automated_Tests.Tests
             Account accountView = new Account();
             accountView.EditEmail(email,ConfigUtil.GetString("Marquee.user.artist"), false);
             //Unable to validate assert because there is a bug when validating the lenght of "New Email" field"
+            Browser.Instance.TakeScreenshot("EditEmailLongName");
             Assert.AreEqual(Browser.Driver.FindElement(By.Name("email1")).GetAttribute("value").Length, 60);
         }
         //
@@ -519,8 +524,10 @@ namespace Marquee_World_Automated_Tests.Tests
         {
             string email = "!#$%#$%$@email.com";
             Account accountView = new Account();
+            Browser.Instance.TakeScreenshot("EditEmailInvalidName");
             accountView.EditEmail(email, ConfigUtil.GetString("Marquee.user.artist"), true);
             // Unable to validate this test case because there is a bug when trying to enter invalid characters to the email account
+            Browser.Instance.TakeScreenshot("EditEmailInvalidName");
             Assert.IsTrue(false);
         }
         //
@@ -531,8 +538,10 @@ namespace Marquee_World_Automated_Tests.Tests
         {
             string email = "cpecora+199@makingsense.com";
             Account accountView = new Account();
+            Browser.Instance.TakeScreenshot("EditEmailSameNewEmailName");
             accountView.EditEmail(email, ConfigUtil.GetString("Marquee.user.artist"), true);
             // Unable to validate this test case because there is a bug when trying to enter same email name
+            Browser.Instance.TakeScreenshot("EditEmailSameNewEmailName");
             Assert.IsTrue(false);
         }
         //
@@ -544,7 +553,9 @@ namespace Marquee_World_Automated_Tests.Tests
             string currentpassword = ConfigUtil.GetString("Marquee.pass.artist");
             string password = ConfigUtil.GetString("Marquee.account.password");
             Account accountView = new Account();
+            Browser.Instance.TakeScreenshot("EditCurrentPasswordFieldSuccesfully");
             accountView.EditPassword(password, currentpassword, currentpassword, true);
+            Browser.Instance.TakeScreenshot("EditCurrentPasswordFieldSuccesfully");
             Assert.IsTrue(Browser.Instance.IsTextPresent(By.Id("med_box"),"Your password has been updated. Please make a note!"));
         }
         //
@@ -556,7 +567,9 @@ namespace Marquee_World_Automated_Tests.Tests
             string currentpassword = "";
             string password = ConfigUtil.GetString("Marquee.account.password");
             Account accountView = new Account();
+            Browser.Instance.TakeScreenshot("EditCurrentPasswordFieldEmpty");
             accountView.EditPassword(currentpassword, password, password, true);
+            Browser.Instance.TakeScreenshot("EditCurrentPasswordFieldEmpty");
             Assert.IsTrue(Browser.Instance.IsElementPresent(By.Name("current")));
         }
         //
@@ -568,8 +581,23 @@ namespace Marquee_World_Automated_Tests.Tests
             string currentpassword = "carlitos1carlitos1carlitos1carlitos1carlitos1carlitos1carlitos1carlitos1";
             string password = ConfigUtil.GetString("Marquee.account.password");
             Account accountView = new Account();
-            accountView.EditPassword(currentpassword, password, password, true);
+            accountView.EditPassword(currentpassword, password, password, false);
+            Browser.Instance.TakeScreenshot("EditCurrentPasswordFieldLongCharacters");
             Assert.AreEqual(Browser.Driver.FindElement(By.Name("current")).GetAttribute("value").Length, 20);
+        }
+        //
+        //Edit Current Password Field Invalid Characters
+        //
+        [TestMethod]
+        public void EditCurrentPasswordFieldInvalidCharacters()
+        {
+            string currentpassword = ConfigUtil.GetString("Marquee.pass.artist");
+            string password = "%&/()==)(/&%$%^+/()(($%";
+            Account accountView = new Account();
+            Browser.Instance.TakeScreenshot("EditCurrentPasswordFieldInvalidCharacters");
+            accountView.EditPassword(currentpassword, password, password, true);
+            Browser.Instance.TakeScreenshot("EditCurrentPasswordFieldInvalidCharacters");
+            Assert.IsTrue(Browser.Instance.IsTextPresent(By.XPath("/html/body/div/div/section/p[2]"), "Please enter a valid password!"));
         }
     }
 }

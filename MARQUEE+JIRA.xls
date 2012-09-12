@@ -1,0 +1,714 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<title>MARQUEE JIRA</title>
+<style type="text/css">
+body
+{
+    margin: 0px;
+    font-size: 12px;
+    font-family: Arial, Sans-Serif, sans-serif;
+    color:black;
+}
+
+</style>
+<META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+<!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+<!--
+Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+since Excel does not use or save the css files it is hardcoded here.
+-->
+<style>
+@page
+{
+mso-page-orientation:landscape;
+margin:.25in .25in .5in .25in;
+mso-header-margin:.5in;
+mso-footer-margin:.25in;
+mso-footer-data:"&R&P of &N";
+mso-horizontal-page-align:center;
+mso-vertical-page-align:center;
+}
+
+br
+{
+    mso-data-placement:same-cell;
+}
+
+td
+{
+    vertical-align: top;
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+<x:ExcelWorksheets>
+<x:ExcelWorksheet>
+<x:Name>general_report</x:Name>
+<x:WorksheetOptions>
+<x:Print>
+<x:ValidPrinterInfo/>
+</x:Print>
+</x:WorksheetOptions>
+</x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+<body>
+
+<table border="1">
+    <tr bgcolor="#114070" height="30">
+        <td colspan="11">
+            <img src="https://jira.marqueeworld.com/images/jira111x30.png" width="111" height="30" border="0" alt="MARQUEE JIRA">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="11">
+            <a href="https://jira.marqueeworld.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+MW+AND+resolution+%3D+Fixed+AND+reporter+%3D+cesarpecora+AND+status+in+%28Resolved%2C+Closed%29">MARQUEE JIRA</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="11">
+            Displaying <strong>21</strong> issues at <strong>11/Sep/12 6:14 AM</strong>.
+        </td>
+    </tr>
+</table>
+
+
+
+
+    
+                                
+        
+        
+                    <table id="issuetable"  border="1" cellpadding="3" cellspacing="1" width="100%">
+                        
+                            <thead>
+    <tr class="rowHeader">
+
+    
+                                    <th class="colHeaderLink headerrow-issuetype"
+
+                    
+                        >
+                    Issue Type
+                                    </th>
+                        
+                                    <th class="colHeaderLink headerrow-issuekey"
+
+                    
+                        >
+                    Key
+                                    </th>
+                        
+                                    <th class="colHeaderLink headerrow-summary"
+
+                    
+                        >
+                    Summary
+                                    </th>
+                        
+                                    <th class="colHeaderLink headerrow-assignee"
+
+                    
+                        >
+                    Assignee
+                                    </th>
+                        
+                                    <th class="colHeaderLink headerrow-reporter"
+
+                    
+                        >
+                    Reporter
+                                    </th>
+                        
+                                    <th class="colHeaderLink headerrow-priority"
+
+                    
+                        >
+                    Priority
+                                    </th>
+                        
+                                    <th class="colHeaderLink headerrow-status"
+
+                    
+                        >
+                    Status
+                                    </th>
+                        
+                                    <th class="colHeaderLink headerrow-resolution"
+
+                    
+                        >
+                    Resolution
+                                    </th>
+                        
+                                    <th class="colHeaderLink headerrow-created"
+
+                    
+                        >
+                    Created
+                                    </th>
+                        
+                                    <th class="colHeaderLink headerrow-updated"
+
+                    
+                        >
+                    Updated
+                                    </th>
+                        
+                                    <th class="colHeaderLink headerrow-duedate"
+
+                    
+                        >
+                    Due Date
+                                    </th>
+                                </tr>
+</thead>
+<tbody>
+
+
+            
+            <tr id="issuerow12777" rel="12777" data-issuekey="MW-223" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-223">MW-223</a>
+</td>
+                                    <td class="nav summary"  >                Sign Up as a General - Email not matching
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Minor
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            05/Sep/12 7:38 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:02 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12776" rel="12776" data-issuekey="MW-222" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-222">MW-222</a>
+</td>
+                                    <td class="nav summary"  >                Change Password - Too short Password Field
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Minor
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            05/Sep/12 7:18 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:02 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12775" rel="12775" data-issuekey="MW-221" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-221">MW-221</a>
+</td>
+                                    <td class="nav summary"  >                Change Password - Too short confirm Password Field
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Minor
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            05/Sep/12 7:16 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:02 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12774" rel="12774" data-issuekey="MW-220" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-220">MW-220</a>
+</td>
+                                    <td class="nav summary"  >                Change Password - Passwords not matching
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Minor
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            05/Sep/12 7:11 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:02 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12773" rel="12773" data-issuekey="MW-219" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-219">MW-219</a>
+</td>
+                                    <td class="nav summary"  >                Change Password - Invalid Input  in Password &amp; Confirm Password Field.
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Minor
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            05/Sep/12 6:56 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:02 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12753" rel="12753" data-issuekey="MW-202" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-202">MW-202</a>
+</td>
+                                    <td class="nav summary"  >                Change My Account Fields - Too long Last Name 
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Minor
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            04/Sep/12 10:35 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:02 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12752" rel="12752" data-issuekey="MW-201" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-201">MW-201</a>
+</td>
+                                    <td class="nav summary"  >                Change My Account Fields - Too long First Name 
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Minor
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            04/Sep/12 10:34 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:02 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12751" rel="12751" data-issuekey="MW-200" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-200">MW-200</a>
+</td>
+                                    <td class="nav summary"  >                Change My Account Fields - Too long Email Address 
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Major
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            04/Sep/12 9:16 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:02 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12750" rel="12750" data-issuekey="MW-199" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-199">MW-199</a>
+</td>
+                                    <td class="nav summary"  >                Change My Account Fields - Too long Artist Website 
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Minor
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            04/Sep/12 9:11 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:02 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12749" rel="12749" data-issuekey="MW-198" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-198">MW-198</a>
+</td>
+                                    <td class="nav summary"  >                Change My Account Fields - Too long Artist Twitter Page 
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Minor
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            04/Sep/12 9:10 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:02 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12748" rel="12748" data-issuekey="MW-197" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-197">MW-197</a>
+</td>
+                                    <td class="nav summary"  >                Change My Account Fields - Too long Artist MySpace
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Minor
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            04/Sep/12 9:09 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:02 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12747" rel="12747" data-issuekey="MW-196" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-196">MW-196</a>
+</td>
+                                    <td class="nav summary"  >                Change My Account Fields - Too long Artist Facebook Link 
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Minor
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            04/Sep/12 9:08 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:02 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12746" rel="12746" data-issuekey="MW-195" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-195">MW-195</a>
+</td>
+                                    <td class="nav summary"  >                Change My Account Fields - Too long Artist Band/Name 
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Trivial
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            04/Sep/12 9:06 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:02 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12745" rel="12745" data-issuekey="MW-194" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-194">MW-194</a>
+</td>
+                                    <td class="nav summary"  >                Change My Account Fields - Invalid Input Postal Code 
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Major
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            04/Sep/12 9:01 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:02 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12744" rel="12744" data-issuekey="MW-193" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-193">MW-193</a>
+</td>
+                                    <td class="nav summary"  >                My Account Page - Old Password is not being verified while changing
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Major
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            04/Sep/12 8:45 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:02 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12741" rel="12741" data-issuekey="MW-190" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-190">MW-190</a>
+</td>
+                                    <td class="nav summary"  >                Change My Account Fields - Invalid Input Email Address
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Major
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            04/Sep/12 8:29 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:02 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12735" rel="12735" data-issuekey="MW-184" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-184">MW-184</a>
+</td>
+                                    <td class="nav summary"  >                My Account Page - Empty Postal Code
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Minor
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            04/Sep/12 7:44 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:01 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12734" rel="12734" data-issuekey="MW-183" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-183">MW-183</a>
+</td>
+                                    <td class="nav summary"  >                My Account Page - Optional Fields for Artist can not be cleared
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Minor
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            04/Sep/12 7:37 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:01 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12732" rel="12732" data-issuekey="MW-181" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-181">MW-181</a>
+</td>
+                                    <td class="nav summary"  >                Change Password - Old Password field is not being encrypted
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Minor
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            04/Sep/12 7:25 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:01 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12728" rel="12728" data-issuekey="MW-177" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-177">MW-177</a>
+</td>
+                                    <td class="nav summary"  >                Terms of Use Page - Download Terms of Use link is wrong
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Major
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            03/Sep/12 1:40 PM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:01 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+        <tr id="issuerow12724" rel="12724" data-issuekey="MW-173" class="issuerow         ">
+                                    <td class="nav issuetype"  > Bug</td>
+                                    <td class="nav issuekey"  >
+
+    <a href="https://jira.marqueeworld.com/browse/MW-173">MW-173</a>
+</td>
+                                    <td class="nav summary"  >                Home Page - Learn More links are wrongly redirecting
+    </td>
+                                    <td class="nav assignee"  >            Troy
+    </td>
+                                    <td class="nav reporter"  >            Cesar Pecora
+    </td>
+                                    <td class="nav priority"  >   Minor
+</td>
+                                    <td class="nav status"  >Resolved
+</td>
+                                    <td class="nav resolution"  >    Fixed
+</td>
+                                    <td class="nav created"  >            03/Sep/12 11:47 AM
+    </td>
+                                    <td class="nav updated"  >            10/Sep/12 3:01 PM    
+    </td>
+                                    <td class="nav duedate"  >    &nbsp;
+</td>
+            </tr>
+                    
+            </table>
+
+                    
+
+    <table border="1" >
+<tr>
+    <td bgcolor="#dddddd" colspan="11"><font size="1">
+        Generated at Tue Sep 11 06:14:27 PDT 2012 by Cesar Pecora using JIRA 4.2.4-b591#591.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>
